@@ -4,19 +4,57 @@ const button = document.getElementById('button');
 
 let hod = 1;
 let hody = [];
+let timer = false;
+
 
 let soucet = 0;
 let prumer = 0;
 
 
-button.addEventListener('click', function() {
-hod = Math.ceil(Math.random() * 6);
-hody.push(hod);
+function animace() {
 
-kostka.src = './img/kostka' + hod + '.png';
+    hod = Math.ceil(Math.random() * 6);
+    
+    
+    kostka.src = './img/kostka' + hod + '.png';
+
+
+}
+
+
+
+
+button.addEventListener('click', function() {
+   
+    if(!timer) {
+
+        timer = setInterval(animace, 50);    
+        button.innerText = 'Zastav';
+    }
+     else {
+
+
+
+
+        button.innerText = 'Hraj';
+clearInterval(timer);
+timer = false;
+hody.push(hod);
 statistikyVypis ();
 soucet += hod;
 prumer = soucet / hody.length;
+
+
+
+
+
+
+   }
+
+
+
+    
+   
 
 
 
