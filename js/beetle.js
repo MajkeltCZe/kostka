@@ -10,7 +10,7 @@ var i = 1;
 
 function animated() {
    
-   t= Math.ceil(Math.random() * 3);
+   t= Math.ceil(Math.random() * 6);
 
 
 cube.src = './img/kostka' + t + '.png';
@@ -50,25 +50,25 @@ beetle.addEventListener('click',  () => {
 console.log(i);
    
 
+
+
+
  if (t == i) {
 
 
 image.src = './img/' + i + '.png'
 i++;
 
+
+
+
 } 
 
-if (t == 6) {
-
-    text.innerHTML = 'Gratuluji k výhře';
-
-
-}
 
 
 
 
-if (throws.length > 10) {
+if (throws.length > 200) {
 
 text.innerHTML = 'Konec hry';
 beetle.style.display = "none";
