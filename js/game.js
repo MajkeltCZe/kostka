@@ -9,7 +9,6 @@ pink.style.display = "none";
 let hod = 1;
 let hody = [];
 let timer = false;
-let timer2 = false;
 
 let soucet = 0;
 let prumer = 0;
@@ -20,7 +19,7 @@ var color = 0;
 
 
 function animace() {
-    let z = 0;
+   
     hod = Math.ceil(Math.random() * 6);
 
 switch(color) {
@@ -41,12 +40,12 @@ default:
 
 
 
-pink.addEventListener('click', function () {
+pink.addEventListener('click', () => {
     kostka.src = './img/0kostka' + hod + '.png';
     color = 1;
 });
 
-gold.addEventListener('click', function () {
+gold.addEventListener('click',  () => {
     kostka.src = './img/1kostka' + hod + '.png';
     color = 2;
 });
@@ -55,10 +54,10 @@ gold.addEventListener('click', function () {
 
 
 
-button.addEventListener('click', function () {
+button.addEventListener('click',  () => {
+console.log(hody);
 
-
-    if (!timer) {
+    if (timer == false) {
 
         timer = setInterval(animace, 50);
         button.innerText = 'Zastav';
@@ -72,7 +71,7 @@ button.addEventListener('click', function () {
         soucet += hod;
         prumer = (soucet / hody.length).toFixed(2);
         console.log(Soucet());
-        statistikyVypis();
+        statistika.innerHTML = statistikyVypis();
 
     }
 });
@@ -80,16 +79,16 @@ button.addEventListener('click', function () {
 
 function Soucet() {
 
-    let sum = 0;
+    let soucet = 0;
 
-    for (let i = 0; i < hody.length; i++) {
-        sum += hody[i];
+    hody.forEach(function(value){
 
-    }
-    return sum;
+soucet+= value;
 
 
+    });
 
+return soucet;
 }
 
 
@@ -98,10 +97,10 @@ function maximum() {
 
     let max = 1;
 
-    hody.forEach(function (value, index) {
+    hody.forEach(function (value) {
 
         if (value > max) max = value;
-    })
+    });
 
     return max;
 
@@ -112,10 +111,10 @@ function minimum() {
 
     let min = 6;
 
-    hody.forEach(function (value, index) {
+    hody.forEach(function (value) {
 
         if (value < min) min = value;
-    })
+    });
 
     return min;
 
@@ -125,22 +124,23 @@ function minimum() {
 
 function statistikyVypis() {
 
-    statistika.innerHTML = `<p>Poslední hod: ${hod}</p>`;
-    statistika.innerHTML += `<p>Celkový počet hodů: ${hody.length}</p>`;
-    statistika.innerHTML += `<p>Součet: ${soucet}</p>`;
-    statistika.innerHTML += `<p>Průměr: ${prumer}</p>`;
-    statistika.innerHTML += `<p>Maximum: ${maximum()}</p>`;
-    statistika.innerHTML += `<p>Minimum: ${minimum()}</p>`;
+    let vysledek  = `<p>Poslední hozená hodnota: ${hod}</p>`; /* hody.[hody.length -1] */
+    vysledek  += `<p>Celkový počet hodů: ${hody.length}</p>`;
+    vysledek += `<p>Součet: ${soucet}</p>`;
+    vysledek += `<p>Průměr: ${(Soucet() / hody.length).toFixed(2)}</p>`;
+    vysledek += `<p>Maximum z hodů: ${maximum()}</p>`;
+    vysledek += `<p>Minimum  z hodů: ${minimum()}</p>`;
 
-    if (soucet == 666) return statistika.innerHTML += '<p> Získal jsi ďábelské číslo</p>';
+    if (soucet == 666) return vysledek += '<p> Získal jsi ďábelské číslo</p>';
 
 if (hody.length >=5) {
 
 gold.style.display = "block";
 pink.style.display = "block";
+
 }
 
-
+return vysledek;
 
 }
 
