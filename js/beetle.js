@@ -24,7 +24,7 @@ beetle.addEventListener('click',  () => {
     
         if (timer2 == false) {
     
-            timer2 = setInterval(animated, 50);
+            timer2 = setInterval(animated, 150);
             beetle.innerText = 'Zastav';
         }
         else {

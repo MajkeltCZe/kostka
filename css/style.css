@@ -1,12 +1,129 @@
-.fishes
-{
-  position: relative;
-  top: 0;
-  left: 0;
+.btn1 {
+
+font-size: x-large !important;
+margin-left: 1.8em;
+
 }
-.fish
-{
-  position: absolute;
-  top: 60px;
-  left: 80px;
+
+#pink,#gold,#blue {
+
+display: none;
+
+
 }
+
+
+img {
+  width: 180px;
+  height: auto;
+  
+  
+  }
+
+.btn-danger {
+width:100px ;
+
+}
+
+.btn-info {
+  width:150px ;
+background-color: #dc3545 !important;
+
+}
+
+
+
+#pink:hover {
+
+background-color: rgb(241, 0, 201) !important;
+
+}
+
+#gold:hover {
+
+  background-color: rgb(216, 187, 22) !important;
+  
+  }
+
+  #blue:hover {
+
+    background-color: rgb(13, 29, 245) !important;
+    
+    }
+
+.cube {
+
+  border: solid black 2px;
+  box-shadow: 4px 3px rgb(0, 0, 0) !important;
+
+
+}
+
+
+#upgrade {
+
+  list-style-type: none;
+
+
+
+}
+
+
+ #upgrade > li {
+
+margin-top:10px ;
+
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url("../img/brick.jpg");
+  text-align: center;
+  }
+
+
+  
+
+.btn {
+
+margin:20px 0px 0px 0px;
+
+
+}
+
+.btn1 {
+
+width: 190px;
+
+}
+
+.btn-info {
+width: 250px;
+
+font-size: 20px !important;
+margin-left: 0px;
+}
+
+
+hr {
+
+  border-top: 1px solid rgb(202, 202, 202);
+  border-bottom: 2px solid rgb(134, 134, 134);
+  border-radius: 5px;
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+

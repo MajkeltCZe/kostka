@@ -10,63 +10,75 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
   <header>
-    <h1 class="text-center jumbotron bg-danger text-white">Kostka</h1>
+    <h1 class="text-center jumbotron bg-danger text-white">Minihry s kostkou</h1>
   </header>
 
   <main class="container">
+    <h2 class="text-center pb-4">Házení kostkou</h2>
     <div class="row">
-      <div class="col-md-3 offset-md-1">
-
+      <div class="col-md-3 offset-md-1 mt-5">
 
 
 
 
         <figure>
-          <img id="kostka" src="img/kostka6.png" alt="Kostka">
+          <img id="kostka" src="img/kostka6.png" alt="Kostka" class="cube">
         </figure>
 
 
-        <button class="btn-danger btn" id="button">Hrej</button>
+        <button class="btn-danger btn btn1 btn-lg" id="button">Hrej</button>
       </div>
 
-      <div id="statistika" class="col-xl-3">
+      <div id="statistika" class="col-xl-3 btn">
 
 
 
 
       </div>
 
-      <div id="statistika" class="col-xl-4">
+      <div id="statistika" class="col-xl-4 bg-color">
         <h2>Vylepšení za 5 hodů</h2>
 
-        <button id="pink" class="btn-danger btn">Růžové kostky</button>
-        <button id="gold" class="mt-2 btn-danger btn">Zlaté kostky</button>
+
+        <ul id="upgrade">
+      <li> <button id="pink" class="btn-info btn">Růžové kostky</button></li> 
+    <li>    <button id="gold" class=" btn-info btn">Zlaté kostky</button> </li> 
+    <li><button id="blue" class=" btn-info btn">Modré kostky</button> </li> 
+  
+  
+  
+  
+  </ul>
+
+
+
 
       </div>
 
     </div>
     <hr class="mt-4">
-<h2 class="text-center">Brouk</h2>
+    <h2 class="text-center">Brouk</h2>
     <div class="row mt-5">
 
-      <div class="col-md-3 offset-md-1">
+      <div class="col-md-3 offset-md-1 col-sm-12 ">
         <figure>
-          <img id="cube" src="img/kostka6.png" alt="Kostka">
+          <img id="cube" src="img/kostka6.png" alt="hracikostka" class="cube">
         </figure>
-       
-        <button class="btn-danger btn" id="beetle">Hrej</button>
-      </div>
-     
-      <div class="col-xl-4">
-<div id="text">
-<img  id="image" src="img/1.png" alt="beetle">
 
-</div>
+        <button class="btn-danger  btn1 btn btn-lg" id="beetle">Hrej</button>
+      </div>
+
+      <div class="col-xl-4">
+        <div id="text">
+          <img id="image" src="img/1.png" alt="beetle">
+
+        </div>
 
 
 
@@ -74,19 +86,19 @@
 
       <div id="statistika" class="col-xl-4">
         <h2>nápověda</h2>
-<p>Máš 10 pokusu na to hodit čísla od 1 do 6 .</p>
+        <p>Máš 10 pokusu na to hodit čísla od 1 do 6 .</p>
 
         <ul>
-  <li>1 - tělo</li>
-<li>2 - hlava</li>
-<li>3 - nohy </li>
-<li>4 - oči</li>
-<li>5 - tykadla</li>
-<li>6 - ocas</li>
+          <li>1 - tělo</li>
+          <li>2 - hlava</li>
+          <li>3 - nohy </li>
+          <li>4 - oči</li>
+          <li>5 - tykadla</li>
+          <li>6 - ocas</li>
 
-</ul>
+        </ul>
 
-        
+
 
       </div>
 

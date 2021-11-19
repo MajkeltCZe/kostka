@@ -3,8 +3,7 @@ const kostka = document.getElementById('kostka');
 const statistika = document.getElementById('statistika');
 const button = document.getElementById('button');
 const gold = document.getElementById('gold');
-gold.style.display = "none";
-pink.style.display = "none";
+const blue = document.getElementById('blue');
 
 let hod = 1;
 let hody = [];
@@ -32,6 +31,7 @@ kostka.src = './img/1kostka' + hod + '.png';
 break;
  
 
+
 default:
       kostka.src = './img/kostka' + hod + '.png';
  
@@ -51,7 +51,10 @@ gold.addEventListener('click',  () => {
 });
 
 
-
+blue.addEventListener('click',  () => {
+    kostka.src = './img/kostka' + hod + '.png';
+    color = 0;
+});
 
 
 button.addEventListener('click',  () => {
@@ -124,20 +127,20 @@ function minimum() {
 
 function statistikyVypis() {
 
-    let vysledek  = `<p>Poslední hozená hodnota: ${hod}</p>`; /* hody.[hody.length -1] */
-    vysledek  += `<p>Celkový počet hodů: ${hody.length}</p>`;
-    vysledek += `<p>Součet: ${soucet}</p>`;
-    vysledek += `<p>Průměr: ${(Soucet() / hody.length).toFixed(2)}</p>`;
-    vysledek += `<p>Maximum z hodů: ${maximum()}</p>`;
-    vysledek += `<p>Minimum  z hodů: ${minimum()}</p>`;
+    let vysledek  = `<p><strong>Poslední hozená hodnota:</strong> ${hod}</p>`; /* hody.[hody.length -1] */
+    vysledek  += `<p><strong>Celkový počet hodů:</strong> ${hody.length}</p>`;
+    vysledek += `<p><strong>Součet:</strong> ${soucet}</p>`;
+    vysledek += `<p><strong>Průměr:</strong> ${(Soucet() / hody.length).toFixed(2)}</p>`;
+    vysledek += `<p><strong>Maximum z hodů:</strong> ${maximum()}</p>`;
+    vysledek += `<p><strong>Minimum  z hodů:</strong> ${minimum()}</p>`;
 
     if (soucet == 666) return vysledek += '<p> Získal jsi ďábelské číslo</p>';
 
 if (hody.length >=5) {
 
-gold.style.display = "block";
-pink.style.display = "block";
-
+gold.style.display = "initial";
+pink.style.display = "initial";
+blue.style.display = "initial";
 }
 
 return vysledek;
