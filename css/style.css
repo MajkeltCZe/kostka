@@ -12,6 +12,14 @@ display: none;
 
 }
 
+#image {
+
+margin-left:35px ;
+width: 280px !important;
+height: auto !important;
+}
+
+
 
 img {
   width: 180px;
@@ -34,7 +42,7 @@ background-color: #dc3545 !important;
 #musicbutton:hover {
 
   background-color: #bd3340 !important;
-
+border: solid red 2px !important;
 
 }
 
@@ -79,7 +87,13 @@ display: none;
   text-align: center;
   }
 
+#image {
+  margin:25px 0px !important;
 
+  width: 280px !important;
+  height: auto !important;
+
+}
   
 
 .btn {

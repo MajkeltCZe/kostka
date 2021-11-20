@@ -9,73 +9,93 @@ let timer2 = false;
 var i = 1;
 
 function animated() {
-   
-   t= Math.ceil(Math.random() * 6);
+
+    t = Math.ceil(Math.random() * 6);
 
 
-cube.src = './img/kostka' + t + '.png';
+    cube.src = './img/kostka' + t + '.png';
 
 }
 
 
 
-beetle.addEventListener('click',  () => {
-    
-    
-        if (timer2 == false) {
-    
-            timer2 = setInterval(animated, 150);
-            beetle.innerText = 'Zastav';
-        }
-        else {
-   
-            beetle.innerText = 'Hrej';
-            clearInterval(timer2);
-            timer2 = false;
-            throws.push(t);
-            Game();
-    
-          
+beetle.addEventListener('click', () => {
+
+    if (beetle.innerText == 'Restart') {
+
+        
+        image.src = './img/0.png';
+        
         }
 
-      
+ 
+    if (timer2 == false) {
 
-    });
-    
-    
- function Game () { 
+        timer2 = setInterval(animated, 250);
+        beetle.innerText = 'Zastav';
+    }
    
-    
-
-console.log(i);
    
 
+   
+    else {
+
+        beetle.innerText = 'Hrej';
+        clearInterval(timer2);
+        timer2 = false;
+        throws.push(t);
+        Game();
 
 
+    }
 
- if (t == i) {
-
-
-image.src = './img/' + i + '.png'
-i++;
-
-
-
-
-} 
-
-
-
-
-
-if (throws.length > 200) {
-
-text.innerHTML = 'Konec hry';
-beetle.style.display = "none";
-
-} 
-
-
-
- }
   
+    
+
+});
+
+
+
+function Game() {
+
+   
+
+
+    if (t == i) {
+
+        if ( i == 6) {
+
+            beetle.innerText = 'Restart';
+            
+        }
+
+        image.src = './img/' + i + '.png';
+        i++;
+
+    }
+
+
+    if (throws.length >= 25) {
+        beetle.innerText = 'Restart';
+      image.src = './img/fail.png';
+        
+
+    }
+
+if (beetle.innerText == 'Restart') {
+
+    throws.length = 0;
+    i = 1;
+
+}
+
+
+
+
+}
+    
+
+
+
+
+
