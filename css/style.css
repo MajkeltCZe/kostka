@@ -5,7 +5,7 @@ margin-left: 1.8em;
 
 }
 
-#pink,#gold,#blue {
+#pink,#gold,#blue,#musicbutton {
 
 display: none;
 
@@ -31,7 +31,12 @@ background-color: #dc3545 !important;
 
 }
 
+#musicbutton:hover {
 
+  background-color: #bd3340 !important;
+
+
+}
 
 #pink:hover {
 
@@ -59,22 +64,12 @@ background-color: rgb(241, 0, 201) !important;
 
 }
 
+audio {
 
-#upgrade {
-
-  list-style-type: none;
-
-
+display: none;
 
 }
 
-
- #upgrade > li {
-
-margin-top:10px ;
-
-
-}
 
 
 
@@ -106,6 +101,9 @@ width: 250px;
 font-size: 20px !important;
 margin-left: 0px;
 }
+
+
+
 
 
 hr {

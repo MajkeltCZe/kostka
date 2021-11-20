@@ -4,6 +4,11 @@ const statistika = document.getElementById('statistika');
 const button = document.getElementById('button');
 const gold = document.getElementById('gold');
 const blue = document.getElementById('blue');
+var myMusic= document.getElementById("music");
+const musicbutton = document.getElementById('musicbutton');
+
+var o = true;
+
 
 let hod = 1;
 let hody = [];
@@ -13,6 +18,36 @@ let soucet = 0;
 let prumer = 0;
 
 var color = 0;
+
+
+musicbutton.addEventListener('click',() => {
+ 
+   if (o == true) {
+        myMusic.play();
+        o = false;
+  musicbutton.innerText='Zastavit hudbu';
+  
+  
+    }
+
+    else {
+        myMusic.pause();
+        o = true;
+        musicbutton.innerText = 'Pustit hudbu';
+    }
+
+
+});
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -142,6 +177,15 @@ gold.style.display = "initial";
 pink.style.display = "initial";
 blue.style.display = "initial";
 }
+
+if (hody.length >= 10) {
+musicbutton.style.display = "initial";
+
+
+
+}
+
+
 
 return vysledek;
 
