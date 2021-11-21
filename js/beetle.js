@@ -2,6 +2,8 @@ const beetle = document.getElementById('beetle');
 const cube = document.getElementById('cube');
 const text = document.getElementById('text');
 const image = document.getElementById('image');
+const tries = document.getElementById('tries');
+
 
 let t = 1;
 let throws = [];
@@ -75,7 +77,7 @@ function Game() {
     }
 
 
-    if (throws.length >= 25) {
+    if (throws.length >= 50) {
         beetle.innerText = 'Restart';
       image.src = './img/fail.png';
         
@@ -89,7 +91,15 @@ if (beetle.innerText == 'Restart') {
 
 }
 
+tries.innerHTML = `<p><strong>Počet hodů v aktuálním kole:</strong> ${throws.length}</p>`;
 
+if (beetle.innerText == 'Restart') {
+
+
+    tries.innerHTML = `<p><strong>Počet hodů v aktuálním kole:</strong></p>`;
+
+
+}
 
 
 }

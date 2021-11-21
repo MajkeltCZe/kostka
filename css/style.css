@@ -5,7 +5,18 @@ margin-left: 1.8em;
 
 }
 
-#pink,#gold,#blue,#musicbutton {
+.btn2 {
+
+  font-size: 20px !important;
+  margin-left: 2.6em;
+width: auto !important;
+
+}
+
+
+
+
+#pink,#gold,#blue,#musicbutton,audio {
 
 display: none;
 
@@ -72,12 +83,6 @@ background-color: rgb(241, 0, 201) !important;
 
 }
 
-audio {
-
-display: none;
-
-}
-
 
 
 
@@ -116,7 +121,11 @@ font-size: 20px !important;
 margin-left: 0px;
 }
 
+ol  {
+margin-left:20px ;
+text-align: justify;
 
+}
 
 
 
@@ -129,10 +138,19 @@ hr {
 
 }
 
+#z {
+
+display: none;
 
 
+}
 
 
+.btn2 {
+margin: 5px 0px 15px 0px;
+
+
+}
 
 
 }
