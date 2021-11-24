@@ -30,6 +30,15 @@ beetle.addEventListener('click', () => {
         
         }
 
+        if (beetle.innerText == 'Restart') {
+
+
+            tries.innerHTML = `<p><strong>Počet hodů v aktuálním kole:</strong></p>`;
+        
+        
+        }
+
+
  
     if (timer2 == false) {
 
@@ -61,7 +70,7 @@ beetle.addEventListener('click', () => {
 function Game() {
 
    
-
+    tries.innerHTML = `<p><strong>Počet hodů v aktuálním kole:</strong> ${throws.length}</p>`;
 
     if (t == i) {
 
@@ -76,30 +85,22 @@ function Game() {
 
     }
 
-
-    if (throws.length >= 50) {
+    if (throws.length >= 25) {
         beetle.innerText = 'Restart';
       image.src = './img/fail.png';
         
 
     }
 
-if (beetle.innerText == 'Restart') {
+
+    if (beetle.innerText == 'Restart') {
 
     throws.length = 0;
     i = 1;
 
 }
 
-tries.innerHTML = `<p><strong>Počet hodů v aktuálním kole:</strong> ${throws.length}</p>`;
 
-if (beetle.innerText == 'Restart') {
-
-
-    tries.innerHTML = `<p><strong>Počet hodů v aktuálním kole:</strong></p>`;
-
-
-}
 
 
 }
