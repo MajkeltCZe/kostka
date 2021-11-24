@@ -69,12 +69,12 @@ function Game() {
    
     tries.innerHTML = `<p><strong>Počet hodů v aktuálním kole:</strong> ${throws.length}</p>`;
    
-   
-   if (pocetKol >= 1) {
+    if (pocetKol >= 1) {
     
-    tries.innerHTML += `<p><strong>Celkový počet kol:</strong> ${pocetKol}</p>`;
-   }
-
+        tries.innerHTML += `<p><strong>Celkový počet kol:</strong> ${pocetKol}</p>`;
+       }
+    
+   
     if (t == i) {
 
         if ( i == 6) {
