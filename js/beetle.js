@@ -9,6 +9,9 @@ let t = 1;
 let throws = [];
 let timer2 = false;
 var i = 1;
+var pocetKol = 0;
+
+
 
 function animated() {
 
@@ -24,20 +27,14 @@ function animated() {
 beetle.addEventListener('click', () => {
 
     if (beetle.innerText == 'Restart') {
-
+pocetKol++;
         
         image.src = './img/0.png';
         
+
         }
 
-        if (beetle.innerText == 'Restart') {
-
-
-            tries.innerHTML = `<p><strong>Počet hodů v aktuálním kole:</strong></p>`;
-        
-        
-        }
-
+    
 
  
     if (timer2 == false) {
@@ -71,6 +68,12 @@ function Game() {
 
    
     tries.innerHTML = `<p><strong>Počet hodů v aktuálním kole:</strong> ${throws.length}</p>`;
+   
+   
+   if (pocetKol >= 1) {
+    
+    tries.innerHTML += `<p><strong>Celkový počet kol:</strong> ${pocetKol}</p>`;
+   }
 
     if (t == i) {
 
